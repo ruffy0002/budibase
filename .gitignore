@@ -1,0 +1,5 @@
+.DS_Store
+nginx
+plugins
+.env
+docker-compose.yml
