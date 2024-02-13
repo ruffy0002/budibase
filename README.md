@@ -40,6 +40,7 @@
 
 <img src="./assets/budibase-authentication-config.png" width="50%">
 
+
 <aside>
 💡 Since users can only be added using the Budibase user management panel, be sure to add the user email in Budibase before logging into Keycloak using valid credentials.
 
