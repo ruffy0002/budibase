@@ -1,0 +1,28 @@
+{
+	"type": "component",
+	"metadata": {},
+	"schema": {
+		"name": "budi-keycloak-redirect",
+		"friendlyName": "budi-keycloak-redirect",
+		"description": "An amazing Budibase component!",
+		"icon": "Text",
+		"settings": [
+			{
+				"type": "text",
+				"key": "id",
+				"label": "ID"
+			},
+			{
+				"type": "text",
+				"key": "appPath",
+				"label": "App Path"
+			},
+			{
+				"type": "text",
+				"required": true,
+				"key": "userId",
+				"label": "User ID"
+			}
+		]
+	}
+}
