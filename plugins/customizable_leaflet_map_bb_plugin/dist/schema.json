@@ -1,0 +1,216 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "customizable_leaflet_map",
+    "friendlyName": "customizable_leaflet_map",
+    "description": "A component which has the ability to add multiple layers, different icons as markers, and more",
+    "icon": "MapView",
+    "settings": [
+      {
+        "type": "dataProvider",
+        "label": "Provider",
+        "key": "dataProvider",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Radius",
+        "key": "radius",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Latitude POI",
+        "key": "latitudePOI",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Longitude POI",
+        "key": "longitudePOI",
+        "required": true
+      },
+      {
+        "type": "field/string",
+        "label": "Latitude Key",
+        "key": "latitudeKey",
+        "required": true
+      },
+      {
+        "type": "field/string",
+        "label": "Longitude Key",
+        "key": "longitudeKey",
+        "required": true
+      },
+      {
+        "type": "field/string",
+        "label": "Title Key",
+        "key": "titleKey"
+      },
+      {
+        "type": "event",
+        "label": "On Click Marker",
+        "key": "onClickMarker",
+        "context": [
+          {
+            "label": "Clicked marker",
+            "key": "marker"
+          }
+        ]
+      },
+      {
+        "type": "boolean",
+        "label": "Enable creating markers",
+        "key": "creationEnabled",
+        "defaultValue": false
+      },
+      {
+        "type": "event",
+        "label": "On Create Marker",
+        "key": "onCreateMarker",
+        "dependsOn": "creationEnabled",
+        "context": [
+          {
+            "label": "New marker latitude",
+            "key": "lat"
+          },
+          {
+            "label": "New marker longitude",
+            "key": "lng"
+          }
+        ]
+      },
+      {
+        "type": "boolean",
+        "label": "Enable Full Screen",
+        "key": "fullScreenEnabled",
+        "defaultValue": true
+      },
+      {
+        "type": "boolean",
+        "label": "Enable Location",
+        "key": "locationEnabled",
+        "defaultValue": true
+      },
+      {
+        "type": "boolean",
+        "label": "Enable Zoom",
+        "key": "zoomEnabled",
+        "defaultValue": true
+      },
+      {
+        "type": "text",
+        "label": "Default Location (when empty)",
+        "key": "defaultLocation",
+        "placeholder": "51.5072,-0.1276"
+      },
+      {
+        "type": "number",
+        "label": "Default Location Zoom Level (0-100)",
+        "key": "zoomLevel",
+        "placeholder": 50,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "text",
+        "label": "Map Attribution",
+        "key": "mapAttribution",
+        "defaultValue": "OpenStreetMap contributors"
+      },
+      {
+        "section": true,
+        "name": "Marker Customization",
+        "settings": [
+          {
+            "type": "icon",
+            "label": "Default Marker Icon",
+            "key": "markerIcon",
+            "defaultValue": "ri-map-pin-2-fill",
+            "required": true
+          },
+          {
+            "type": "color",
+            "label": "Default Marker Color",
+            "key": "colorIcon",
+            "defaultValue": "var(--spectrum-global-color-red-600)"
+          },
+          {
+            "type": "boolean",
+            "label": "Advanced Customization",
+            "key": "customizationBoolean",
+            "defaultValue": false
+          },
+          {
+            "type": "select",
+            "label": "Type of Marker Icon",
+            "key": "iconType",
+            "defaultValue": false,
+            "options": [
+              {
+                "value": false,
+                "label": ""
+              },
+              {
+                "value": "faCustIcon",
+                "label": "Remix Icon"
+              },
+              {
+                "value": "colorCustIcon",
+                "label": "Color"
+              },
+              {
+                "value": "urlCustIcon",
+                "label": "URL"
+              },
+              {
+                "value": "divIcon",
+                "label": "DivIcon"
+              }
+            ],
+            "dependsOn": "customizationBoolean"
+          },
+          {
+            "type": "field/string",
+            "label": "Key Field",
+            "key": "customKeyField",
+            "required": true,
+            "dependsOn": "customizationBoolean"
+          },
+          {
+            "type": "options",
+            "label": "Define Key Value Pairs",
+            "key": "customIconOptions",
+            "dependsOn": "customizationBoolean"
+          },
+          {
+            "type": "boolean",
+            "label": "Enable Layer Control",
+            "key": "showLayerControlEnabled",
+            "dependsOn": "customizationBoolean",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Tile Customization",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Base Tile URL",
+            "key": "tileURL"
+          },
+          {
+            "type": "options",
+            "label": "Multiple Tiles",
+            "key": "tileMultipleURL"
+          }
+        ]
+      }
+    ]
+  },
+  "hash": "edc0e845c655f756f46ce843f65ac335432798f8",
+  "version": "1.0.0"
+}
