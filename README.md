@@ -30,6 +30,15 @@ npm install -g @budibase/cli
 
 </aside>
 
+### Override default values
+
+> You may use values.override.yaml to configure default user and password.
+>
+
+```bash
+helm upgrade -n budibase budibase budibase/budibase -f values-override.yaml
+```
+
 # Instructions
 
 ## Overview
